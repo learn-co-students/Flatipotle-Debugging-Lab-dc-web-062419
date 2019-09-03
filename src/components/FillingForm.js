@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react'
 
-const FillingForm = (props) => {
+class FillingForm extends React.Component {
+  
+  render(){
+
   return (
     <Fragment>
       <h1><label htmlFor="fillings">Fillings</label></h1>
@@ -12,7 +15,7 @@ const FillingForm = (props) => {
               type="checkbox"
               value="White Rice"
               name="fillings"
-              checked={ this.props.fillings.includes('White Rice') }
+              checked={this.props.fillings.includes('White Rice') }
               onChange={ this.props.handleChange }
             />
             <img src={ require('../images/fillings/white-rice.png') } height="100px" width="100px" alt="white rice" />
@@ -82,6 +85,7 @@ const FillingForm = (props) => {
       </div>
     </Fragment>
   )
+  }
 }
 
 export default FillingForm
